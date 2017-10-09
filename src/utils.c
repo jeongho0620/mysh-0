@@ -21,10 +21,13 @@ void mysh_parse_command(const char* command,
 		*((*argv)+i)=(char*)malloc(sizeof(char));
 		strcpy(*((*argv)+i),a);
 		i++;
+		printf("arguments : %s \n",a);
 		a=strtok(NULL," ");
 	}
 	
 	*argc=count;
+	printf("numbe of arguments : %d \n",*argc);
+
 	free(a);
   // TODO: Fill this!
 }
